@@ -1,4 +1,3 @@
-#include<stdalign.h>
 #include<stdio.h>
 
 int factorial(int n);
