@@ -7,8 +7,8 @@ void main() {
 	//char str[] = "THIS IS NEPAL";
 	char str[1000];
 	printf("Enter Ant Character : ");
-	scanf ("%[^\n]%*c", str);
-	char *pointer;
+	scanf ("%[^\n]%*c", str); //error fixed
+	char *pointer
 
 	pointer = str;
 
