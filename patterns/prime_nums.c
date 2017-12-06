@@ -1,10 +1,13 @@
 #include <stdio.h>
 
 int main(){
-	int a, b, min=7, max=20, flag=0;
+	int a, b, min, max, flag=0;
 
+	printf("Enter The intervals [Min, Max]: ");
+	scanf("%d %d", &min,&max);
 
 	while(min<max){
+		flag=0;
 		// printf("asf\n");
 		for(a=2; a<=min/2; a++){
 			// printf("asgas\n");
@@ -14,9 +17,9 @@ int main(){
 				break;
 			}
 		}
-		
+
 		// printf("%d\n", a);
-		
+
 		if(flag==0){
 			printf("%d\n", min);
 		}
