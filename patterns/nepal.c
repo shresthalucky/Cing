@@ -1,13 +1,18 @@
-#include<stdio.h>
+#include <stdio.h>
 
 void main() {
 
-  int i,j;
-  char n[5] = {'N','E','P','A','L'};
-  for (i=4;i>=0;i--){
-    for (j=0;j<=i;++j) {
-      printf("%c",n[j]);
-    }
-    printf("\n");
-  }
+	int i,j;
+  // char n[5] = {'N','E','P','A','L'};
+	char str[] = "THIS IS NEPAL";
+	char *pointer;
+
+	pointer = str;
+
+	for (i=0; pointer[i]; i++){
+		for (j=0;j<=i;++j) {
+			printf("%c", pointer[j]);
+		}
+		printf("\n");
+	}
 }
