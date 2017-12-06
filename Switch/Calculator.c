@@ -1,17 +1,19 @@
 #include <stdio.h>
+#include "functions.h"
 
-void add(int a, int b);
-void sub(int a, int b);
-void mul(int a, int b);
-void div(int a, int b);
+// void add(int a, int b);
+// void sub(int a, int b);
+// void mul(int a, int b);
+// void div(int a, int b);
 
 int main() {
 
   int a, b, c;
 
-  printf("Enter 2 numbers:\n");
+  printf("Enter 2 numbers:");
   scanf("%d %d", &a, &b);
-  printf("Enter the operation \n1.Add\n2.Sub\n2.Multiply\n4.Divide");
+  ifwrong :
+  printf("Enter the operation \n1.Add\n2.Sub\n2.Multiply\n4.Divide\n:");
 
   scanf("%d", &c);
 
@@ -25,6 +27,7 @@ int main() {
     case 4 : div(a,b);
     break;
     default : printf("Wrong Input\n");
+    goto ifwrong;
   }
   return 0;
 }
