@@ -9,7 +9,7 @@ void main() {
 
 	pointer = str;
 
-	for (i=0; pointer[i]; i++){
+	for (pointer[i]; i>=0; i--){
 		for (j=0;j<=i;++j) {
 			printf("%c", pointer[j]);
 		}
