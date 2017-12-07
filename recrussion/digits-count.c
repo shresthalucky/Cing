@@ -4,8 +4,6 @@ int noOfDigits(int n);
 int main()
 {
   int n,ctr;
-    printf("\n\n count the digits of a given number :\n");
-	printf("-----------------------------------------\n");
     printf(" Input  a number : ");
     scanf("%d",&n);
 
