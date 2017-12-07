@@ -6,7 +6,7 @@ void main() {
   // char n[5] = {'N','E','P','A','L'};
 	//char str[] = "THIS IS NEPAL";
 	char str[1000];
-	printf("Enter Ant Character : ");
+	printf("Enter Any Character : ");
 	scanf ("%[^\n]%*c", str); //error fixed
 	char *pointer;
 
