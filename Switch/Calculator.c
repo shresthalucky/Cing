@@ -7,13 +7,12 @@
 // void div(int a, int b);
 
 int main() {
-z
   int a, b, c;
 
   printf("Enter 2 numbers:");
   scanf("%d %d", &a, &b);
   ifwrong :
-  printf("Enter the operation \n1.Add\n2.Sub\n2.Multiply\n4.Divide\n:");
+  printf("Enter the operation \n1.Add\n2.Subract\n2.Multiply\n4.Divide\n5.Remainder\nEnter Your Operation : ");
 
   scanf("%d", &c);
 
@@ -25,6 +24,8 @@ z
     case 3 : mul(a,b);
     break;
     case 4 : div(a,b);
+    break;
+    case 5 : rem(a,b);
     break;
     default : printf("Wrong Input\n");
     goto ifwrong;
@@ -50,4 +51,9 @@ void mul(int a, int b) {
 void div(int a, int b) {
   float c = a/b;
   printf("%f\n", c);
+}
+
+void rem(int a, int b) {
+  float c = a%b;
+  printf("Ans : %.2f", c);
 }
