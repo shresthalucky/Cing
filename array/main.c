@@ -33,7 +33,7 @@ int main(){
   	printf("%d, ", a[i]);
   }
 
-  aSum(n, a);
+  // aSum(n, a);
 
   return 0;
 }
