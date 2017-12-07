@@ -6,5 +6,5 @@ void aSum(int n, int a[]){
 	for (i = 0; i < n; i++){
     	sum = sum + a[i];
 	}
-	printf("Sum: %d\n", sum);
+	printf("\nSum: %d\n", sum);
 }
