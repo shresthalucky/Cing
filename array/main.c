@@ -8,12 +8,13 @@ int main(){
 
 	int a[50], temp2;
   char n[100];
-	printf("How many ints?\n");
+	printf("How many ints? : ");
 	scanf("%s", &n);
+	printf("----------------------------------------------\n");
 
   temp2=atoi(n);
 
-	(temp2==0) ? iftrue(temp2) : iffalse(temp2, a);
+	(temp2==0) ? iftrue(n) : iffalse(temp2, a);
 
 	// if(temp2==0){
   //   printf("Not a interger");
@@ -50,8 +51,10 @@ int main(){
 	return 0;
 }
 
-void iftrue(int temp2) {
-	printf("Not An Interger");
+void iftrue(char n[100]) {
+	printf("%s is Not an Interger!\n", n);
+	printf("----------------------------------\n");
+	main();
 }
 
 void iffalse(int temp2, int a[50]) {
@@ -69,14 +72,16 @@ void iffalse(int temp2, int a[50]) {
 				}
 			}
 		}
-
+		printf("----------------------------------------------\n");
 		printf("Ascending sorting: ");
 		for (i = 0; i < temp2; i++){
 			printf("%d, ", a[i]);
 		}
-
+		printf("\n----------------------------------------------\n");
 		printf("Descending sorting: ");
 		for (i = temp2-1; i >= 0; i--){
 			printf("%d, ", a[i]);
 		}
+		printf("\n----------------------------------------------\n");
+		main();
 }
