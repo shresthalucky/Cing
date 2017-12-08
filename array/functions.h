@@ -3,5 +3,5 @@
 
 void aSum(int n, int a[]);
 void iftrue(char n[100]);
-void iffalse (int temp2,int a[50]);
+void iffalse (int temp2);
 #endif

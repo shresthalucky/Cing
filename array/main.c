@@ -6,7 +6,7 @@
 
 int main(){
 
-	int a[50], temp2;
+	int temp2;
 	char n[100], x = 'y';
 
 	do{
@@ -16,7 +16,7 @@ int main(){
 
 		temp2=atoi(n);
 
-		(temp2==0) ? iftrue(n) : iffalse(temp2, a);
+		(temp2==0) ? iftrue(n) : iffalse(temp2);
 
 		printf("Want to contiue? (y/n) ");
 		scanf("%s", &x);
@@ -32,12 +32,20 @@ void iftrue(char n[100]) {
 	main();
 }
 
-void iffalse(int temp2, int a[50]) {
+void iffalse(int temp2) {
 	int i,j,temp;
+	char a[50];
 	for (i = 0; i < temp2; i++){
 		printf("Enter number %d: ", i+1);
-		scanf("%d", &a[i]);
+		scanf("%s", &a[i]);
+
+		if(isdigit(a[i])==0){
+			printf("Not an Interger!\n");
+			break;
+		}
+
 	}
+
 	for (i = 0; i < temp2; i++){
 		for (j=i+1; j < temp2; j++){
 			if (a[i] > a[j]){
@@ -58,7 +66,7 @@ void iffalse(int temp2, int a[50]) {
 		printf("%d, ", a[i]);
 	}
 
-	aSum(temp2, a);
+	// aSum(temp2, a);
 	
 	printf("\n----------------------------------------------\n");
 }
