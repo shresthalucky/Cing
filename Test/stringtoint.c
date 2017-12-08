@@ -17,5 +17,5 @@ int main() {
   else {
     printf("%d\n", temp);
   }
-  goto top;
+  goto top; //sample comment
 }
