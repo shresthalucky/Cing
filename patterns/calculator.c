@@ -11,11 +11,6 @@ int main(){
 
 	scanf("%d", &opt);
 
-	// switch(operation){
-	// 	case 1:
-	// 		printf("%d", result=num1+num2);
-	// }
-
 	if(opt==1){
 		printf("%d", result=num1+num2);
 	}else if(opt==2){

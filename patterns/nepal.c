@@ -3,11 +3,10 @@
 void main() {
 
 	int i,j;
-  // char n[5] = {'N','E','P','A','L'};
-	//char str[] = "THIS IS NEPAL";
+
 	char str[1000];
 	printf("Enter Any Character : ");
-	scanf ("%[^\n]%*c", str); //error fixed
+	scanf ("%[^\n]%*c", str);
 	char *pointer;
 
 	pointer = str;

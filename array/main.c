@@ -7,46 +7,21 @@
 int main(){
 
 	int a[50], temp2;
-  char n[100];
-	printf("How many ints? : ");
-	scanf("%s", &n);
-	printf("----------------------------------------------\n");
+	char n[100], x = 'y';
 
-  temp2=atoi(n);
+	do{
+		printf("How many ints? : ");
+		scanf("%s", n);
+		printf("----------------------------------------------\n");
 
-	(temp2==0) ? iftrue(n) : iffalse(temp2, a);
+		temp2=atoi(n);
 
-	// if(temp2==0){
-  //   printf("Not a interger");
-  //     // exit(EXIT_FAILURE); //same as exit(1)
-  //   }
-  // else{
-  //     for (i = 0; i < temp2; i++){
-  //   			printf("Enter number %d: ", i+1);
-  //   			scanf("%d", &a[i]);
-  //   		}
-  //   		for (i = 0; i < temp2; i++){
-  //   			for (j=i+1; j < temp2; j++){
-  //   				if (a[i] > a[j]){
-  //   					temp = a[i];
-  //   					a[i] = a[j];
-  //   					a[j] = temp;
-  //   				}
-  //   			}
-  //   		}
-	//
-  //   		printf("Ascending sorting: ");
-  //   		for (i = 0; i < temp2; i++){
-  //   			printf("%d, ", a[i]);
-  //   		}
-	//
-  //   		printf("Descending sorting: ");
-  //   		for (i = temp2-1; i >= 0; i--){
-  //   			printf("%d, ", a[i]);
-  //   		}
-  //     }
+		(temp2==0) ? iftrue(n) : iffalse(temp2, a);
 
-  // aSum(n, a);
+		printf("Want to contiue? (y/n) ");
+		scanf("%s", &x);
+	
+	}while(x=='y');
 
 	return 0;
 }
@@ -60,28 +35,30 @@ void iftrue(char n[100]) {
 void iffalse(int temp2, int a[50]) {
 	int i,j,temp;
 	for (i = 0; i < temp2; i++){
-			printf("Enter number %d: ", i+1);
-			scanf("%d", &a[i]);
-		}
-		for (i = 0; i < temp2; i++){
-			for (j=i+1; j < temp2; j++){
-				if (a[i] > a[j]){
-					temp = a[i];
-					a[i] = a[j];
-					a[j] = temp;
-				}
+		printf("Enter number %d: ", i+1);
+		scanf("%d", &a[i]);
+	}
+	for (i = 0; i < temp2; i++){
+		for (j=i+1; j < temp2; j++){
+			if (a[i] > a[j]){
+				temp = a[i];
+				a[i] = a[j];
+				a[j] = temp;
 			}
 		}
-		printf("----------------------------------------------\n");
-		printf("Ascending sorting: ");
-		for (i = 0; i < temp2; i++){
-			printf("%d, ", a[i]);
-		}
-		printf("\n----------------------------------------------\n");
-		printf("Descending sorting: ");
-		for (i = temp2-1; i >= 0; i--){
-			printf("%d, ", a[i]);
-		}
-		printf("\n----------------------------------------------\n");
-		main();
+	}
+	printf("----------------------------------------------\n");
+	printf("Ascending sorting: ");
+	for (i = 0; i < temp2; i++){
+		printf("%d, ", a[i]);
+	}
+	printf("\n----------------------------------------------\n");
+	printf("Descending sorting: ");
+	for (i = temp2-1; i >= 0; i--){
+		printf("%d, ", a[i]);
+	}
+
+	aSum(temp2, a);
+	
+	printf("\n----------------------------------------------\n");
 }

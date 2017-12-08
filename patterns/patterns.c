@@ -1,7 +1,3 @@
-//
-// Created by lucky on 11/6/17.
-//
-
 void pattern_1(int rows){
 	int a, b;
 
