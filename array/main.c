@@ -26,35 +26,36 @@ void iftrue(char n[100]) {
 }
 
 void iffalse(int temp2) {
-	int i,j,temp;
-	int a[50];
-	test:
+	int i,j,temp, a[50], flag = 0;
 	for (i = 0; i < temp2; i++){
 			printf("Enter number %d: ", i+1);
 			if (scanf("%d", &a[i]) != 1) {
 				printf("Error!\n");
-				goto test;
+				flag = 1;
+				break;
 			}
 		}
-		for (i = 0; i < temp2; i++){
-			for (j=i+1; j < temp2; j++){
-				if (a[i] > a[j]){
-					temp = a[i];
-					a[i] = a[j];
-					a[j] = temp;
+		if (flag == 0){
+			for (i = 0; i < temp2; i++){
+				for (j=i+1; j < temp2; j++){
+					if (a[i] > a[j]){
+						temp = a[i];
+						a[i] = a[j];
+						a[j] = temp;
+					}
 				}
 			}
+			printf("----------------------------------------------\n");
+			printf("Ascending sorting: ");
+			for (i = 0; i < temp2; i++){
+				printf("%d, ", a[i]);
+			}
+			printf("\n----------------------------------------------\n");
+			printf("Descending sorting: ");
+			for (i = temp2-1; i >= 0; i--){
+				printf("%d, ", a[i]);
+			}
+			printf("\n----------------------------------------------\n");
 		}
-		printf("----------------------------------------------\n");
-		printf("Ascending sorting: ");
-		for (i = 0; i < temp2; i++){
-			printf("%d, ", a[i]);
-		}
-		printf("\n----------------------------------------------\n");
-		printf("Descending sorting: ");
-		for (i = temp2-1; i >= 0; i--){
-			printf("%d, ", a[i]);
-		}
-		printf("\n----------------------------------------------\n");
-		main();
+		//main();
 }
