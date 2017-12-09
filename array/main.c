@@ -26,16 +26,14 @@ void iftrue(char n[100]) {
 }
 
 void iffalse(int temp2) {
-	int i,j,temp, a[50], flag = 0;
+	int i,j,temp, a[50];
 	for (i = 0; i < temp2; i++){
 			printf("Enter number %d: ", i+1);
 			if (scanf("%d", &a[i]) != 1) {
-				printf("Error!\n");
-				flag = 1;
-				break;
+				printf("Error!");
+				exit(EXIT_FAILURE);
 			}
 		}
-		if (flag == 0){
 			for (i = 0; i < temp2; i++){
 				for (j=i+1; j < temp2; j++){
 					if (a[i] > a[j]){
@@ -56,6 +54,4 @@ void iffalse(int temp2) {
 				printf("%d, ", a[i]);
 			}
 			printf("\n----------------------------------------------\n");
-		}
-		//main();
 }
