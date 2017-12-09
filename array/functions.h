@@ -4,4 +4,8 @@
 void aSum(int n, int a[]);
 void iftrue(char n[100]);
 void iffalse (int temp2);
+
+void getMatrix(int rows, int columns);
+void sumMatrix(int rows, int columns);
+
 #endif
