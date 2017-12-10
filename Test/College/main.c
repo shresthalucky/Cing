@@ -6,7 +6,7 @@ int main(){
   int temp;
   char n[10];
   do{
-    printf("What funtion do you want to use? \n1.Type 00\n2.Type 01\n3.Type 10\n4. Type 11\nEnter the value:\t");
+    printf("What funtion do you want to use? \n1.Type 00\n2.Type 01\n3.Type 10\n4.Type 11\nEnter the value:\t");
     scanf("%s", n);
     temp = atoi(n);
   }while(temp == 0);
@@ -27,7 +27,7 @@ int main(){
       scanf("%d %d %d", &a,&b,&c);
       printf("%d is the largest.", largenum11(a,b,c));
       break;
-    default : printf("Enter Correct Value");
+    default : printf("Enter Correct Value!");
   }
   return 0;
 }
@@ -41,8 +41,11 @@ void checknum1(int a, int b, int c){
       printf("%d is the largest.", c);
     }
   }
-  else{
+  else if (b>c){
     printf("%d is the largest.", b);
+  }
+  else{
+    printf("%d is the largest.", c);
   }
 }
 
@@ -55,8 +58,11 @@ int checknum2(int a, int b, int c){
       return(c);
     }
   }
-  else{
+  else if (b>c){
     return(b);
+  }
+  else{
+    return(c);
   }
 }
 
