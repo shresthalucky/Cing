@@ -1,9 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "../functions.h"
 
 int main(){
 
-	int rows, columns,o;
+	int rows, columns,test;
+	char o[10];
 
 	printf("Number of rows in matrix: ");
 	scanf("%d", &rows);
@@ -12,19 +14,21 @@ int main(){
 	scanf("%d", &columns);
 
 	getMatrix(rows, columns);
-
-	ifwrong:
+do{
 	printf("Choose Your Operation:\n1. Add\n2. Subract\n:");
-	scanf("%d", &o);
-	switch(o){
-		case 1 : sumMatrix(rows, columns);
-		break;
-		case 2 : subMatrix(rows, columns);
-		break;
-		default: printf("Wrong input!");
-		goto ifwrong;
-	}
+	scanf("%s", o);
 
+	test = atoi(o);
+}while(test == 0);
+
+switch(test){
+	case 1 : sumMatrix(rows, columns);
+	break;
+	case 2 : subMatrix(rows, columns);
+	break;
+	default: printf("Wrong input!");
+	break;
+}
 
 	return 0;
 }
