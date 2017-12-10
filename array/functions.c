@@ -60,3 +60,13 @@ void sumMatrix(int rows, int columns){
 	}
 
 }
+
+void subMatrix(int rows, int columns){
+	printf("\nMatrix A - Matrix B:\n");
+	for(i=0; i<rows; i++){
+		for(j=0; j<columns; j++){
+			printf("%d\t", matrix_1[i][j] - matrix_2[i][j]);
+		}
+		printf("\n");
+	}
+}
