@@ -9,7 +9,7 @@ int main(){
     printf("What funtion do you want to use? \n1.Type 00\n2.Type 01\n3.Type 10\n4. Type 11\nEnter the value:\t");
     scanf("%s", n);
     temp = atoi(n);
-  }while(temp == 0 && temp > 4);
+  }while(temp == 0);
 
   switch (temp) {
     case 1 : largenum00();
