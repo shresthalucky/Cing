@@ -27,7 +27,7 @@ int main(){
       scanf("%d %d %d", &a,&b,&c);
       printf("%d is the largest.", largenum11(a,b,c));
       break;
-    default : printf("Enter Correct Value!");
+    default : printf("Enter Correct Value!\n"); main();
   }
   return 0;
 }
@@ -67,8 +67,9 @@ int checknum2(int a, int b, int c){
 }
 
 void largenum00(){
-    printf("Enter Three Numbers:\t");
-    scanf("%d %d %d", &a,&b,&c);
+    do{
+      printf("Enter Three Numbers:\t");
+    }while(scanf("%d %d %d", &a,&b,&c) == 0);
     checknum1(a,b,c);
 }
 
