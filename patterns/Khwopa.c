@@ -1,14 +1,14 @@
 #include <stdio.h>
-main() {
-   char a[6]="Khwopa";
+void main() {
+   char a[]="Khwopa";
    int i,j;
    for(i=5; i>=0; i--){
       for(j=0;j<i;j++){
-          putch(' ');
+          putc(' ', stdout);
       }
       for(j=i;j<=5;j++){
-          putch(a[j]);
+          putc(a[j], stdout);
       }
-      putch('\n');
+      putc('\n', stdout);
    }
 }
