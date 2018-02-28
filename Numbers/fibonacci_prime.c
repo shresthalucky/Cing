@@ -12,23 +12,20 @@ int main(){
   printf("Enter the value of n : ");
   scanf("%d", &n);
   r = fib(n);
-  if(r==0) printf("Prime");
+  if(r==1) printf("Prime");
   else printf("Not prime");
   return 0;
 }
 
 int prime(int a){
-    printf("%3d\n", a);
-    int i, flag = 0;
+    int i, flag = 1;
     for(i=2; i<a/2; i++){
         if((a%i)==0){
-            flag = 1;
+            flag = 0;
             break;
         }
     }
-    printf("%3d", flag);
-    if(flag==1) return 1;
-    else return 0;
+    return flag;
 }
 
 int fib(int n){
@@ -39,5 +36,6 @@ int fib(int n){
       a=b;
       b=c;
     }
+    printf("%dth fibonacci number is : %d\n", n,sum);
     return (prime(sum));
 }
