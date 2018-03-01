@@ -1,0 +1,5 @@
+Item Code	Description	Rate	Quantity	Cost
+123	assd	200.00	2	400.00
+1234	asdfg	400.00	5	2400.00
+VAT 15			2880.00
+Service Charge 5			120.00
