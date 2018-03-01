@@ -35,7 +35,7 @@ int main(){
 				if (i==7 && j==0) {
 					printf("%c ", tolower(a[j]));
 				} else {
-
+`
 					printf("%c ", a[j]);
 				}
 
