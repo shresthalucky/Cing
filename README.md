@@ -12,7 +12,7 @@ while (noSuccess){
 }
 ```
 
-#Complie and run?
+# Complie and run?
 
 Following are the commands to complie the program using [GCC](https://gcc.gnu.org/) and run them:
 
